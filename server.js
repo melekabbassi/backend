@@ -4,7 +4,7 @@ const app = express();
 const router = express.Router();
 
 router.get('/irm', (request, response) => {
-    res.send('IRM');
+    response.send('IRM');
 });
 
 app.use('/', router)
