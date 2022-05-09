@@ -3,11 +3,16 @@ const app = express();
 
 const router = express.Router();
 
-router.get('/irm', (req, res) => {
+router.get('/irm', (request, response) => {
     res.send('IRM');
 });
 
 app.use('/', router)
+
+app.use((request, response, next) => {
+    response.status(404).send('404 Not Found');
+    next();
+});
 
 app.listen(3000, (request, response) => {
     console.log('Server is running on port 3000');
