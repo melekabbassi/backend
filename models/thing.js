@@ -23,5 +23,5 @@ const thingSchema = mongoose.Schema ({
     },
 })
 
-const Thing = mongoose.model('Thing', thingSchema)
+const Thing = mongoose.model('thing', thingSchema)
 module.exports = Thing
